@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohammad Adeeb Al Rahman — Video Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#0e1117;color:#e8e8e8;min-height:100vh}
+    .hero{padding:60px 40px 50px;border-bottom:1px solid #1e2530}
+    .hero-tag{font-size:11px;letter-spacing:3px;color:#2ab090;text-transform:uppercase;margin-bottom:16px}
+    .hero-name{font-family:'Playfair Display',serif;font-size:52px;color:#fff;line-height:1.1;margin-bottom:6px}
+    .hero-name span{color:#2ab090;position:relative;display:inline-block}
+    .hero-name span::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:2px;background:#2ab090;animation:pulse 2s ease-in-out 0.5s both}
+    @keyframes pulse{0%{opacity:0;transform:scaleX(0)}60%{opacity:1;transform:scaleX(1)}100%{opacity:1}}
+    .hero-role{font-size:16px;color:#8a9ab0;margin-bottom:24px;font-weight:300;letter-spacing:1px}
+    .hero-bio{font-size:15px;color:#aab0bc;line-height:1.8;max-width:560px;margin-bottom:32px}
+    .hero-links{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:10px 22px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:none;font-family:'Inter',sans-serif}
+    .btn-primary{background:#2ab090;color:#0e1117}
+    .btn-outline{background:transparent;color:#2ab090;border:1px solid #2ab090}
+    .section{padding:48px 40px;border-bottom:1px solid #1e2530}
+    .section-label{font-size:10px;letter-spacing:3px;color:#2ab090;text-transform:uppercase;margin-bottom:24px}
+    .showreel-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:12px;overflow:hidden;border:1px solid #1e2530}
+    .showreel-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+    .skill-pill{background:#161c27;border:1px solid #1e2a3a;border-radius:8px;padding:12px 16px;font-size:13px;color:#ccd0d8;display:flex;align-items:center;gap:8px}
+    .skill-dot{width:6px;height:6px;border-radius:50%;background:#2ab090;flex-shrink:0}
+    .exp-list{display:flex;flex-direction:column;gap:28px}
+    .exp-card{background:#13181f;border:1px solid #1e2530;border-radius:10px;padding:24px;border-left:3px solid #2ab090}
+    .exp-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+    .exp-title{font-size:15px;font-weight:600;color:#fff}
+    .exp-company{font-size:13px;color:#2ab090;font-weight:500;margin-bottom:4px}
+    .exp-date{font-size:12px;color:#5a6a80;background:#1a2030;padding:4px 10px;border-radius:20px;white-space:nowrap}
+    .exp-bullets{margin-top:12px;padding-left:16px;display:flex;flex-direction:column;gap:6px}
+    .exp-bullets li{font-size:13px;color:#8a9ab0;line-height:1.7}
+    .work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .work-card{background:#13181f;border:1px solid #1e2530;border-radius:10px;padding:20px}
+    .work-icon{font-size:24px;margin-bottom:12px}
+    .work-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:6px}
+    .work-desc{font-size:12px;color:#6a7a90;line-height:1.6;margin-bottom:14px}
+    .work-link{font-size:12px;color:#2ab090;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+    .work-tag{display:inline-block;font-size:10px;background:#1a2a20;color:#2ab090;border:1px solid #1e3a28;padding:2px 8px;border-radius:20px;margin-right:4px;margin-bottom:4px}
+    .tools-row{display:flex;flex-wrap:wrap;gap:10px}
+    .tool-badge{background:#161c27;border:1px solid #1e2a3a;border-radius:6px;padding:8px 14px;font-size:13px;color:#b0b8c8}
+    .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+    .contact-card{background:#13181f;border:1px solid #1e2530;border-radius:10px;padding:20px;display:flex;align-items:center;gap:14px}
+    .contact-icon{width:38px;height:38px;border-radius:8px;background:#1a2a20;border:1px solid #1e3a28;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+    .contact-label{font-size:11px;color:#5a6a80;margin-bottom:2px}
+    .contact-val{font-size:13px;color:#ccd0d8}
+    .footer{padding:28px 40px;text-align:center}
+    .footer p{font-size:12px;color:#3a4a5a}
+    @media(max-width:600px){
+      .hero{padding:40px 20px 36px}
+      .hero-name{font-size:36px}
+      .section{padding:36px 20px}
+      .footer{padding:20px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-tag">Video Editor · Content Creator</div>
+    <div class="hero-name">Mohammad <span>Adeeb</span> Al Rahman</div>
+    <div class="hero-role">Crafting stories that move people — frame by frame</div>
+    <div class="hero-bio">3+ years editing for brands, educators, and creators. From LMS course videos to viral Reels, I turn raw footage into content that connects, converts, and lasts.</div>
+    <div class="hero-links">
+      <a class="btn btn-primary" href="mailto:adeebalrahman.md@gmail.com">✉ Let's Work Together</a>
+      <a class="btn btn-outline" href="https://instagram.com/domiiiverse" target="_blank">↗ See My Work</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Showreel</div>
+    <div class="showreel-wrap">
+      <iframe src="https://drive.google.com/file/d/1Y9dpnQMKCrR_DET5yIm93LDUs4pkWxW6/preview" allow="autoplay" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">What I Do</div>
+    <div class="skills-grid">
+      <div class="skill-pill"><span class="skill-dot"></span>Video Editing</div>
+      <div class="skill-pill"><span class="skill-dot"></span>Color Grading</div>
+      <div class="skill-pill"><span class="skill-dot"></span>Motion Graphics</div>
+      <div class="skill-pill"><span class="skill-dot"></span>Sound Design</div>
+      <div class="skill-pill"><span class="skill-dot"></span>Reels & Short-form</div>
+      <div class="skill-pill"><span class="skill-dot"></span>LMS Course Editing</div>
+      <div class="skill-pill"><span class="skill-dot"></span>Graphic Design</div>
+      <div class="skill-pill"><span class="skill-dot"></span>Content Strategy</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Work Samples</div>
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="work-icon">🎬</div>
+        <div class="work-title">Motovlog Reels</div>
+        <div class="work-desc">Short-form motorcycle content for Telugu-speaking riders — riding tips, bike reviews, safety guides.</div>
+        <div><span class="work-tag">Reels</span><span class="work-tag">DaVinci Resolve</span></div>
+        <a class="work-link" href="https://instagram.com/domiiiverse" target="_blank">View on Instagram ↗</a>
+      </div>
+      <div class="work-card">
+        <div class="work-icon">📚</div>
+        <div class="work-title">LMS Course Videos</div>
+        <div class="work-desc">Educational video editing for Codegnan & Sudheer Chaganti — clean, structured, student-friendly content.</div>
+        <div><span class="work-tag">Ed-Tech</span><span class="work-tag">After Effects</span></div>
+        <a class="work-link" href="mailto:adeebalrahman.md@gmail.com">Request Samples ↗</a>
+      </div>
+      <div class="work-card">
+        <div class="work-icon">📱</div>
+        <div class="work-title">Brand & Social Content</div>
+        <div class="work-desc">Video ads and social reels for 10+ local businesses — doctors, restaurants, textile brands, and more.</div>
+        <div><span class="work-tag">Ads</span><span class="work-tag">Social Media</span></div>
+        <a class="work-link" href="mailto:adeebalrahman.md@gmail.com">Request Samples ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Experience</div>
+    <div class="exp-list">
+      <div class="exp-card">
+        <div class="exp-top">
+          <div>
+            <div class="exp-title">Professional Video Editor</div>
+            <div class="exp-company">Codegnan — Ed-Tech</div>
+          </div>
+          <div class="exp-date">Sep 2025 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Editing course videos for LMS platform with Sudheer Chaganti's competitive exam content</li>
+          <li>End-to-end post-production: cuts, color grading, motion graphics, and subtitles</li>
+        </ul>
+      </div>
+      <div class="exp-card">
+        <div class="exp-top">
+          <div>
+            <div class="exp-title">Video Editor</div>
+            <div class="exp-company">Red Bird Biz</div>
+          </div>
+          <div class="exp-date">May 2025 – Sep 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Produced content for 10+ local businesses across healthcare, retail, and hospitality</li>
+          <li>Created targeted social media ads and reels that boosted client engagement</li>
+        </ul>
+      </div>
+      <div class="exp-card">
+        <div class="exp-top">
+          <div>
+            <div class="exp-title">Video Editor</div>
+            <div class="exp-company">Begin Here Solutions</div>
+          </div>
+          <div class="exp-date">Nov 2023 – Apr 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Led video production for Ed-Tech and Quick Commerce clients, improving user acquisition by 20%</li>
+          <li>Improved click-through rates by 30% through optimized product video campaigns</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Tools I Use</div>
+    <div class="tools-row">
+      <div class="tool-badge">DaVinci Resolve</div>
+      <div class="tool-badge">After Effects</div>
+      <div class="tool-badge">Final Cut Pro</div>
+      <div class="tool-badge">Premiere Pro</div>
+      <div class="tool-badge">Photoshop</div>
+      <div class="tool-badge">Illustrator</div>
+      <div class="tool-badge">Figma</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Get In Touch</div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">✉</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val">adeebalrahman.md@gmail.com</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-val">Vijayawada, Andhra Pradesh</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📷</div>
+        <div>
+          <div class="contact-label">Instagram</div>
+          <div class="contact-val">@domiiiverse · @domiiicreates</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-val">+91 9030421102</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Mohammad Adeeb Al Rahman · Video Editor · Vijayawada</p>
+  </div>
+
+</body>
+</html>
